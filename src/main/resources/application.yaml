@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: rksp7
+  r2dbc:
+    url: r2dbc:h2:file:///./testdb
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+  sql:
+    init:
+      schema-locations: classpath*:db/schema.sql
+      data-locations: classpath*:db/data.sql
