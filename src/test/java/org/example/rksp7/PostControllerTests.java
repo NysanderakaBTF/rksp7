@@ -2,6 +2,7 @@ package org.example.rksp7;
 
 
 
+import io.r2dbc.spi.ConnectionFactory;
 import org.example.rksp7.controller.PostController;
 import org.example.rksp7.model.Post;
 import org.example.rksp7.service.PostService;
@@ -24,6 +25,9 @@ public class PostControllerTests {
 
     @MockBean
     private PostService postService; // Мокируем сервис
+
+    @MockBean
+    private ConnectionFactory connectionFactory;
 
     @Test
     public void testGetPostById() {
