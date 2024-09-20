@@ -15,16 +15,6 @@ import org.springframework.web.reactive.config.EnableWebFlux;
 @EnableR2dbcRepositories
 public class Rksp7Application {
 
-    @Bean
-    ConnectionFactoryInitializer initializer(ConnectionFactory connectionFactory) {
-
-        ConnectionFactoryInitializer initializer = new ConnectionFactoryInitializer();
-        initializer.setConnectionFactory(connectionFactory);
-        initializer.setDatabasePopulator(new ResourceDatabasePopulator(new ClassPathResource("db/schema.sql")));
-
-        return initializer;
-    }
-
     public static void main(String[] args) {
         SpringApplication.run(Rksp7Application.class, args);
     }
